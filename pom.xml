@@ -175,6 +175,7 @@ CSV files of various types.
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+		<skip>true</skip>
           <excludes>
             <exclude>**/perf/PerformanceTest.java</exclude>
           </excludes>
@@ -190,11 +191,6 @@ CSV files of various types.
           <enableRulesSummary>false</enableRulesSummary>
         </configuration>
       </plugin>
-
-	<!-- add config-->
-
-
-
       <!-- We need to add our test data files to rat exclusions -->
       <!-- Needed for command-line access, e.g mvn apache-rat:rat and mvn apache-rat:check -->
       <plugin>
